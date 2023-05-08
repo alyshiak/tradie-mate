@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 require('mongoose-type-email');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-//const Order = require('./Order');
+//const Tradesperson = require('./Tradesperson');
 
 const userSchema = new Schema({
   username: {
@@ -22,7 +22,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
-  //orders: [Order.schema]
+  //favourites: [Tradesperson.schema]
 });
 
 // set up pre-save middleware to create password
