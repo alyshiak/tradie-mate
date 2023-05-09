@@ -1,0 +1,37 @@
+[
+    {
+      "name": "Conor",
+      "trade": "Carpentry",
+      "location": "Melbourne",
+      "phone": "0412 345 678",
+      "email": "conor@email.com"
+    },
+    {
+        "name": "Alyshia",
+        "trade": "Painter",
+        "location": "Melbourne",
+        "phone": "0412 345 679",
+        "email": "alyshia@email.com"
+      },
+      {
+        "name": "Jack",
+        "trade": "Painter",
+        "location": "Melbourne",
+        "phone": "0412 345 677",
+        "email": "jack@email.com"
+      },
+      {
+        "name": "Tom",
+        "trade": "Electrician",
+        "location": "Gold Coast",
+        "phone": "0412 345 676",
+        "email": "tom@email.com"
+      },
+      {
+        "name": "Maggie",
+        "trade": "Plumber",
+        "location": "Melbourne",
+        "phone": "0412 345 675",
+        "email": "maggie@email.com"
+      }
+]
