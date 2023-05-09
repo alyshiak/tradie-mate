@@ -2,14 +2,14 @@ const { Schema, model } = require('mongoose');
 const mongoose = require("mongoose");
 require('mongoose-type-email');
 
-const favouriteSchema = new Schema({
-  favouriteId: {
-    type: mongoose.ObjectId,
-  },
-  favourite: {
-    type: Boolean,
-  },
-});
+// const favouriteSchema = new Schema({
+//   favouriteId: {
+//     type: mongoose.ObjectId,
+//   },
+//   favourite: {
+//     type: Boolean,
+//   },
+// });
 
 const tradespersonSchema = new Schema(
   {
@@ -34,22 +34,21 @@ const tradespersonSchema = new Schema(
     email: {
     type: mongoose.SchemaTypes.Email,
     required: true,
-    },
+    }
 
-    favourite: [favouriteSchema],
+    // favourite: [favouriteSchema],
   },
   {
-    toJSON: {
-      virtuals: true,
-    },
-    id: false,
+    // toJSON: {
+    //   virtuals: true,
+    // },
   }
 );
 
 const Tradesperson = model('tradesperson', tradespersonSchema);
 
-tradespersonSchema.virtual('favouriteCount').get(function() {
-  return this.favourite.length;
-});
+// tradespersonSchema.virtual('favouriteCount').get(function() {
+//   return this.favourite.length;
+// });
 
 module.exports = Tradesperson;
