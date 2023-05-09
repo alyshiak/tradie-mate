@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import logo from 'assets/logo.png';
+import css from 'src/components/Header/navbar.css';
 
 function navbar() {
 
@@ -24,3 +24,5 @@ return(
     </nav>
 )
 }
+
+export default navbar; 
