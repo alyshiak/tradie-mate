@@ -11,23 +11,22 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware,
+  // context: authMiddleware,
 });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/tradie-mate/build')));
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '../client/tradie-mate')));
+// }
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/tradie-mate/build/index.html'));
-});
-
+ app.get('/', (req, res) => {
+   res.sendFile(path.join(__dirname, '../client/tradie-mate/public/index.html'));
+ });
 
 // Create a new instance of an Apollo server with the GraphQL schema
-const startApolloServer = async (typeDefs, resolvers) => {
+const startApolloServer = async () => {
   await server.start();
   server.applyMiddleware({ app });
   
@@ -40,4 +39,4 @@ const startApolloServer = async (typeDefs, resolvers) => {
   };
   
 // Call the async function to start the server
-  startApolloServer(typeDefs, resolvers);
+  startApolloServer();
