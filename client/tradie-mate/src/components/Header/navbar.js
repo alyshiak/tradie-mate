@@ -22,13 +22,16 @@ function Header() {
             <div>
               {Auth.loggedIn() ? (
                 <>
-                  <span>Hey there, {Auth.getUser().data.username}!</span>
+                  <Link className="btn btn-lg btn-info m-2" to="/tradieform">
+                    Add a Tradie Mate
+                  </Link>
                   <button className="btn btn-lg btn-light m-2" onClick={logout}>
                     Logout
                   </button>
                 </>
               ) : (
                 <>
+
                   <Link className="btn btn-lg btn-info m-2" to="/login">
                     Login
                   </Link>
