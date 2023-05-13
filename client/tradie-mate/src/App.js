@@ -10,9 +10,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 // // import Profile from './pages/Profile';
 // import Signup from './pages/Signup';
-// import Login from './pages/Login';
+import Login from './pages/Login';
 // import Header from './components/Header';
-import TradieList from './components/tradieList/index.js';
+// import tradies from './tradieList/index.js';
 import Footer from './components/Footer';
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -44,7 +44,10 @@ function App() {
                 path="/"
                 element={<Home />}
               />
-                
+              <Route
+              path='/login'
+              element={<Login/>}
+              />
             </Routes>
           </div>
           {/* { <Footer /> } */}

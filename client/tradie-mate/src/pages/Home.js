@@ -17,7 +17,7 @@ const Home = () => {
           ) : (
             <TradieList
               tradies={tradies}
-              title="Here's the current roster of tradies..."
+              title="Here's the current list of tradies..."
             />
           )}
         </div>
