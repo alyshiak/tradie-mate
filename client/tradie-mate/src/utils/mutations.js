@@ -12,15 +12,18 @@ export const ADD_USER = gql`
   }
 `;
 
-// export const ADD_SKILL = gql`
-//   mutation addSkill($profileId: ID!, $skill: String!) {
-//     addSkill(profileId: $profileId, skill: $skill) {
-//       _id
-//       name
-//       skills
-//     }
-//   }
-// `;
+ export const ADD_TRADIE = gql`
+mutation Mutation($name: String!, $trade: String!, $location: String!, $email: String!, $phone: String!) {
+  addTradie(name: $name, trade: $trade, location: $location, email: $email, phone: $phone) {
+    _id
+    name
+    trade
+    location
+    phone
+    email
+  }
+}
+`;
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {

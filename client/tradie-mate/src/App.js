@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import Header from '../src/components/Header/navbar';
 // import tradies from './tradieList/index.js';
 import Footer from './components/Footer';
+import TradieForm from './pages/tradieForm';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -51,6 +52,10 @@ function App() {
               <Route
               path='/signup'
               element={<Signup/>}
+              />
+              <Route
+              path='/tradieform'
+              element={<TradieForm/>}
               />
             </Routes>
           </div>
