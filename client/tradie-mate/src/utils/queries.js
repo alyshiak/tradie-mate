@@ -18,6 +18,12 @@ export const QUERY_TRADIES = gql`
       location
       email
       phone
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
     }
   }
 `;

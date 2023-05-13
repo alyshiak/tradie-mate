@@ -62,6 +62,40 @@ const resolvers = {
 
       return tradie;
     },
+    addComment: async (parent, { tradieId, commentText }, context) => {
+      if (context.user) {
+        return Tradesperson.findOneAndUpdate(
+          { _id: tradieId },
+          {
+            $addToSet: {
+              comments: { commentText, commentAuthor: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeComment: async (parent, { tradieId, commentId }, context) => {
+      if (context.user) {
+        return Tradesperson.findOneAndUpdate(
+          { _id: tradieId },
+          {
+            $pull: {
+              comments: {
+                _id: commentId,
+                commentAuthor: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
  },
  };
 
