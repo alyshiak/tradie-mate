@@ -9,9 +9,9 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 // // import Profile from './pages/Profile';
-// import Signup from './pages/Signup';
+import Signup from './pages/Signup';
 import Login from './pages/Login';
-// import Header from './components/Header';
+import Header from '../src/components/Header/navbar';
 // import tradies from './tradieList/index.js';
 import Footer from './components/Footer';
 const httpLink = createHttpLink({
@@ -37,7 +37,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          {/* <Header /> */}
+          { <Header /> }
           <div className="container">
             <Routes>
               <Route
@@ -47,6 +47,10 @@ function App() {
               <Route
               path='/login'
               element={<Login/>}
+              />
+              <Route
+              path='/signup'
+              element={<Signup/>}
               />
             </Routes>
           </div>
