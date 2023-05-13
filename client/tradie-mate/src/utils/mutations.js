@@ -37,3 +37,20 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const ADD_COMMENT = gql`
+  mutation addComment($tradieId: ID!, $commentText: String!) {
+    addComment(tradieId: $tradieId, commentText: $commentText) {
+      _id
+      name
+      trade
+      location
+      phone
+      email
+      comments {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`;

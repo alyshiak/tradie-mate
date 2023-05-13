@@ -14,8 +14,15 @@ const typeDefs = gql`
     location: String
     phone: String
     email: String
+    comments: [Comment]!
   }
 
+  type Comment {
+    _id: ID
+    commentText: String
+    commentAuthor: String
+    createdAt: String
+  }
   type Auth {
     token: ID!
     user: User
@@ -33,6 +40,8 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addTradie(name: String!, trade: String!, location:String!, email:String!, phone: String!): Tradesperson
+    addComment(tradieId: ID!, commentText: String!): Tradesperson
+    removeComment(tradieId: ID!, commentId: ID!): Tradesperson
   }
 
 `;

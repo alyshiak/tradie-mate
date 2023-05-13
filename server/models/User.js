@@ -22,6 +22,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
+  tradies: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Tradesperson',
+    },
+  ],
   //favourites: [Tradesperson.schema]
 });
 

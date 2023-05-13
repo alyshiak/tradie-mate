@@ -15,6 +15,7 @@ import Header from '../src/components/Header/navbar';
 // import tradies from './tradieList/index.js';
 import Footer from './components/Footer';
 import TradieForm from './pages/tradieForm';
+import SingleTradie from './pages/SingleTradie';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -56,6 +57,10 @@ function App() {
               <Route
               path='/tradieform'
               element={<TradieForm/>}
+              />
+              <Route 
+              path="/tradies/:tradieId" 
+              element={<SingleTradie />}
               />
             </Routes>
           </div>

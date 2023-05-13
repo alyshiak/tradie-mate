@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, UNSAFE_LocationContext } from 'react-router-dom';
-
+import CommentList from '../CommentList';
+import CommentForm from '../CommentForm';
 
 const TradieList = ({ tradies, name, trade, location, email, phone }) => {
     if (!tradies.length) {
@@ -30,8 +31,15 @@ const TradieList = ({ tradies, name, trade, location, email, phone }) => {
                   >
                     Save to favourite Tradie Mates.
                   </Link>
+                  <Link
+              className="btn btn-primary btn-block btn-squared"
+              to={`/tradies/${tradie._id}`}
+            >
+              Add a review on this Tradie Mate.
+            </Link>
+    </div>
                 </div>
-              </div>
+              
             ))}
         </div>
       </div>
