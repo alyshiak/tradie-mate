@@ -11,7 +11,7 @@ import Home from './pages/Home';
 // // import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Header from '../src/components/Header/navbar';
+import Navbar from '../src/components/Header/navbar';
 // import tradies from './tradieList/index.js';
 import Footer from './components/Footer';
 import TradieForm from './pages/tradieForm';
@@ -35,11 +35,10 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 function App() {
-  return (
-    <ApolloProvider client={client}>
+  return  ( <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          { <Header /> }
+          { <Navbar /> }
           <div className="container">
             <Routes>
               <Route
