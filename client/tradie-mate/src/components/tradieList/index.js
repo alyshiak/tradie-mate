@@ -26,12 +26,6 @@ const TradieList = ({ tradies, name, trade, location, email, phone }) => {
                     <li>{tradie.phone}</li>
                   </ul>
                   <Link
-                    className="btn btn-block btn-squared btn-light text-dark"
-                    to={`/tradies/${tradie._id}`}
-                  >
-                    Save to favourite Tradie Mates.
-                  </Link>
-                  <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/tradies/${tradie._id}`}
             >
