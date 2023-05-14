@@ -11,11 +11,15 @@ const TradieList = ({ tradies, name, trade, location, email, phone }) => {
     return (
       <div>
         <h3 className="text-primary">{name}</h3>
-        <div className="flex-row justify-space-between my-4">
+        <div id="test" className="flex-row justify-space-between my-4">
           {tradies &&
             tradies.map((tradie) => (
-              <div key={tradie._id} className="col-12 col-xl-6">
-                <div className="card mb-3">
+              // <div key={tradie._id} className="col-12 col-xl-6">
+              <div key={tradie._id} >
+                 {/* <div className="card mb-3">  */}
+               
+                <div className="card">
+
                   <h4 className="card-header bg-dark text-light p-2 m-0">
                     {tradie.name} <br />
                   </h4>
@@ -26,10 +30,11 @@ const TradieList = ({ tradies, name, trade, location, email, phone }) => {
                     <li>{tradie.phone}</li>
                   </ul>
                   <Link
+
               className="btn btn-primary btn-block btn-squared"
               to={`/tradies/${tradie._id}`}
             >
-              Add a review on this Tradie Mate.
+              Add a review.
             </Link>
     </div>
                 </div>
