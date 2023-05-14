@@ -13,6 +13,7 @@ export const QUERY_USER = gql`
 export const QUERY_TRADIES = gql`
   query allTradies {
     tradies {
+      _id
       trade
       name
       location
@@ -31,11 +32,18 @@ export const QUERY_TRADIES = gql`
 export const QUERY_SINGLE_TRADIE = gql`
   query singleTradie($tradieId: ID!) {
     tradie(tradieId: $tradieId) {
+        id_
         trade
         name
         location
         email
         phone
+        comments {
+          _id
+          commentText
+          commentAuthor
+          createdAt
+        }
     }
   }
 `;
