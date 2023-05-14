@@ -1,28 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from 'assets/logo.png';
-import css from 'src/components/Header/navbar.css';
 
-function navbar() {
+import { useRef } from 'react';
+import {FaBars, FaTimes} from "react-icons/fa";
+import "../Styles/main.css";
+// import "../../public/assets/logo.svg"
 
-return(
-    <nav>
-        {/* logo */}
-        <div>
-            <img src={logo} alt="logo" />
-        </div>
 
-        {/* Favourite Tradies */}
-        <div>
-            <FaHeart /> Favourite Tradies
-        </div> 
 
-        {/* Login/Logout */} 
-        <div>
-            <FaUser /> Login 
-        </div>   
-    </nav>
-)
+function Navbar() {
+    const navRef = useRef();
+
+    const showNavbar = () => {
+        navRef.current.classList.toggle(
+            "responsive_nav"
+            );
+    };    
+    
+
+        return (
+            <header>
+            <img src="/assets/logo-1.svg" className="app-logo" alt="logo" />
+       
+                    <nav ref={navRef}>
+                        <a href="/#">Home</a>
+                        <a href="/#">Search</a>
+                        <a href="/#">My Profile</a>
+                        <a href="/#">Login/Signup</a>
+                        <button
+                                className="nav-btn nav-close-btn"
+                                onClick={showNavbar}>
+                                <FaTimes />
+                        </button>
+                </nav>
+                <button 
+                        className="nav-btn"
+                        onClick={showNavbar}>
+                        <FaBars />
+                </button>
+        </header>
+    );
 }
 
-export default navbar; 
+export default Navbar; 
