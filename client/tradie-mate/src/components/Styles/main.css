@@ -8,8 +8,8 @@
 }
 
 :root {
-	--mainColor: #232325;
-	--mainColorLight: #7e8087;
+	--mainColor: #414144;
+	--mainColorLight: #787c8a;
 	--secondaryColor: #7b700f;
 	--textColor: #eee;
 }
@@ -100,3 +100,83 @@ header img {
     
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image:url(/Users/boulter97/Documents/tradie-mate/client/tradie-mate/public/assets/construction-tools-.jpeg);
+    color: black;
+}
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 5px;
+    width: 225px;
+    background:#90af9e;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+    border: 5px solid transparent;
+    border-color: rgb(41, 42, 40);
+}
+.card:hover{
+border-color:yellow ; 
+}
+  
+  .btn{
+    border: none;
+    outline: none;
+    background:rgb(143, 143, 106);
+    color: black;
+    border-radius: 10px;
+    max-width: 120px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+    border: 3px solid rgb(51, 57, 44);
+  }
+  .btn:hover{
+    background:solid;
+    color:#7b700f;
+  }
+
+  #test{
+display: flex;
+flex-wrap: wrap;
+width: 60%;
+margin: auto;
+margin-top: 40px;
+
+  }
+  .align-centre{
+    text-align: center;
+  }
