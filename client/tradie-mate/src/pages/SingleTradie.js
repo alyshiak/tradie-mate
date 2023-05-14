@@ -9,22 +9,24 @@ import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_TRADIE } from '../utils/queries';
 
-const SingleTradie = () => {
+const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
-  const { tradieId } = useParams();
+  const { tradieId: tradieId }  = useParams(':tradieId');
+  console.log(tradieId)
 
   const { loading, data } = useQuery(QUERY_SINGLE_TRADIE, {
-    // pass URL parameter
-    variables: { tradieId: tradieId },
+    // Pass the `thoughtId` URL parameter into query to retrieve this thought's data
+    variables: {tradieId: tradieId},
   });
 
-  const tradie = data?.tradie || {};
+  const tradie = data?.tradie|| {  name,  trade, location, email, phone, comments};
+  console.log(tradie)
 
   if (loading) {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-3">
+    <div  className="my-3">
       <h4 className="card-header bg-dark text-light p-2 m-0">
                     {tradie.name} <br />
                   </h4>
