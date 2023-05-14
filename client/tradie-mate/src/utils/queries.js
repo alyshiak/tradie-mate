@@ -30,22 +30,22 @@ export const QUERY_TRADIES = gql`
 `;
 
 export const QUERY_SINGLE_TRADIE = gql`
-  query singleTradie($tradieId: ID!) {
-    tradie(tradieId: $tradieId) {
-        id_
-        trade
-        name
-        location
-        email
-        phone
-        comments {
-          _id
-          commentText
-          commentAuthor
-          createdAt
-        }
+  query Query($tradieId: ID!) {
+  tradie(tradieId: $tradieId) {
+    _id
+    name
+    trade
+    location
+    phone
+    email
+    comments {
+      _id
+      commentText
+      commentAuthor
+      createdAt
     }
   }
+}
 `;
 
 // export const QUERY_ME = gql`
