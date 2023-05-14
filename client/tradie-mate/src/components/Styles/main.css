@@ -22,6 +22,8 @@ header {
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
+
+    box-shadow:3px 3px 3px 3px #1f1f20;
 }
 
 nav a {
@@ -78,6 +80,7 @@ nav {
 		gap: 1.5rem;
 		background-color: var(--mainColor);
 		transition: 1s;
+        /* box-shadow:30px 30px 30px 30px #1f1f20; */
 	}
 
 	header .responsive_nav {
@@ -107,7 +110,8 @@ header img {
     font-family: sans-serif;
 }
 body{
-    background-image:url(/Users/boulter97/Documents/tradie-mate/client/tradie-mate/public/assets/construction-tools-.jpeg);
+    background-color: var(--mainColor);
+    /* background-image:url(/Users/boulter97/Documents/tradie-mate/client/tradie-mate/public/assets/construction-tools-.jpeg); */
     color: black;
 }
 .container{
