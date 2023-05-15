@@ -62,6 +62,19 @@ const resolvers = {
 
       return tradie;
     },
+    removeTradie: async (parent, { tradieId }, context) => {
+      if (context.user) {
+        const tradie = await Tradesperson.findOneAndDelete({
+          _id: tradieId,
+        });
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { tradies: tradie._id } }
+        );
+
+        return tradie;
+      }
+    },
     addComment: async (parent, { tradieId, commentText }, context) => {
       if (context.user) {
         return Tradesperson.findOneAndUpdate(
@@ -77,7 +90,7 @@ const resolvers = {
           }
         );
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
     removeComment: async (parent, { tradieId, commentId }, context) => {
       if (context.user) {
@@ -94,7 +107,7 @@ const resolvers = {
           { new: true }
         );
       }
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('You need to be logged in!');
     },
  },
  };

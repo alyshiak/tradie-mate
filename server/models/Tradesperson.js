@@ -18,23 +18,33 @@ const tradespersonSchema = new Schema(
       required: true,
       max_length: 50,
       min_length: 1,
+      trim: true,
     },
     trade: {
       type: String,
       required: true,
+      trim: true,
     },
     location: {
     type: String,
      required: true,
+     trim: true,
     },
     phone: {
     type: String,
     required: true,
+    trim: true,
     },
     email: {
     type: mongoose.SchemaTypes.Email,
     required: true,
+    trim: true,
     },
+    tradieCreator: {
+      type: String,
+      trim: true,
+    },
+
       comments: [
     {
       commentText: {

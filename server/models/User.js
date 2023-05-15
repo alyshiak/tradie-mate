@@ -28,7 +28,6 @@ const userSchema = new Schema({
       ref: 'Tradesperson',
     },
   ],
-  //favourites: [Tradesperson.schema]
 });
 
 // set up pre-save middleware to create password
