@@ -32,7 +32,7 @@ function Navbar() {
                         <Link to ="/" onClick={logout}>Log Out</Link></>
                         ) : ( 
                         <> <Link to="/login">Login</Link>
-                        <Link to="/signup">Signup</Link></>)}
+                        <Link to="/signup">Sign Up</Link></>)}
                         <button   
                                 className="nav-btn nav-close-btn"
                                 onClick={showNavbar}>

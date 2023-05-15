@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_TRADIE } from '../utils/mutations';
-
+import "../components/Styles/main.css";
 import Auth from '../utils/auth';
 
 const TradieForm = () => {

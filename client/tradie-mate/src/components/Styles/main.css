@@ -110,9 +110,12 @@ header img {
     font-family: sans-serif;
 }
 body{
-    background-color: var(--mainColor);
-    /* background-image:url(/Users/boulter97/Documents/tradie-mate/client/tradie-mate/public/assets/construction-tools-.jpeg); */
-    color: black;
+    
+    background-image:url(/Users/boulter97/Documents/tradie-mate/client/tradie-mate/public/assets/yellow-constructions.jpeg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+ 
 }
 .container{
     max-width: 1300px;
@@ -140,7 +143,7 @@ h1{
     flex: 0 0 calc(33.33% - 20px);
     margin: 5px;
     width: 225px;
-    background:#90af9e;
+    background:#7e8983;
     border-radius: 10px;
     padding: 20px;
     transition: .3s;
@@ -184,3 +187,109 @@ margin-top: 40px;
   .align-centre{
     text-align: center;
   }
+
+  .section__padding{
+    padding: 2px 2px;
+  }
+  
+  /* .footer{
+
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+
+    box-shadow:3px 3px 3px 3px #1f1f20;
+  }
+
+.sb__footer{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.sb__footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap:wrap;
+    width: 100%;
+   
+    margin-bottom: 4rem;
+}
+
+.sb__footer-links-div{
+    width: 100%;
+    margin: 1.3rem;
+    display: flex;
+justify-content:center;
+flex-direction: column;
+
+
+}
+h5{
+    color: #d2c7c7;
+   text-align: center;
+   max-width: 100%;
+   margin: 0 auto;
+} */
+.footer{
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 80px;
+padding: 0 2rem;
+background-color: var(--mainColor);
+color: var(--textColor);
+box-shadow: 3px 3px 3px 3px #1f1f20;
+}
+
+.sb__footer {
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.sb__footer-links {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
+text-align: center;
+margin-bottom: 40px;
+}
+
+.sb__footer-links a {
+margin: 0 1rem;
+color: var(--textColor);
+text-decoration: none;
+}
+
+.sb__footer-links a:hover {
+color: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 768px) {
+.footer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 2rem 1rem;
+}
+
+.sb__footer-links {
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.sb__footer-links a {
+  margin: 0 0.5rem;
+}
+}
