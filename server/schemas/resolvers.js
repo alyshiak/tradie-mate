@@ -53,11 +53,10 @@ const resolvers = {
     },
 
     addTradie: async (parent, { name, trade, location, email, phone }) => {
-      const tradieCreator = context.user._id 
-      const tradie = await Tradesperson.create({ name, trade, location, email, phone, tradieCreator });
+      const tradie = await Tradesperson.create({ name, trade, location, email, phone });
 
       await User.findOneAndUpdate(
-        { _id: tradieCreator },
+        { username: name },
         { $addToSet: { tradies: tradie._id } }
       );
 
