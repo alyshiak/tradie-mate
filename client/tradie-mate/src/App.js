@@ -8,13 +8,14 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import css from "../src/App.css";
+import "../src/components/Styles/main.css";
 import Home from './pages/Home';
 // // import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Navbar from '../src/components/Header/navbar';
 // import tradies from './tradieList/index.js';
-import Footer from './components/Footer';
+import Footer from '../src/components/Footer/footer';
 import TradieForm from './pages/tradieForm';
 import SingleTradie from './pages/SingleTradie';
 const httpLink = createHttpLink({
@@ -64,7 +65,7 @@ function App() {
               />
             </Routes>
           </div>
-          {/* { <Footer /> } */}
+          {<Footer />}
         </div>
       </Router>
     </ApolloProvider>
