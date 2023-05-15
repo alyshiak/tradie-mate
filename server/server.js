@@ -17,12 +17,12 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/tradie-mate/build')));
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '../client/tradie-mate')));
+// }
 
  app.get('/', (req, res) => {
-   res.sendFile(path.join(__dirname, '../client/tradie-mate/build/index.html'));
+   res.sendFile(path.join(__dirname, '../client/tradie-mate/public/index.html'));
  });
 
 // Create a new instance of an Apollo server with the GraphQL schema
