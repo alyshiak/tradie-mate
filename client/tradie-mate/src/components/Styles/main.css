@@ -111,7 +111,7 @@ header img {
 }
 body{
     
-    background-image:url(/Users/boulter97/Documents/tradie-mate/client/tradie-mate/public/assets/yellow-constructions.jpeg); 
+    background-color: var(--mainColor); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
