@@ -54,3 +54,23 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const REMOVE_TRADIE = gql `
+mutation RemoveTradie($tradieId: ID!) {
+  removeTradie(tradieId: $tradieId) {
+    _id
+    name
+    trade
+    location
+    phone
+    email
+    tradieCreator
+    comments {
+      _id
+      commentText
+      commentAuthor
+      createdAt
+    }
+  }
+}
+`
