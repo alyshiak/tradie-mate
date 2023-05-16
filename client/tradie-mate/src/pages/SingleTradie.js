@@ -26,21 +26,22 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
     return <div>Loading...</div>;
   }
   return (
-    <div  className="my-3">
-      <h4 className="card-header bg-dark text-light p-2 m-0">
+    <div  className=" container my-3" style={{ backgroundColor: '#787c8a ' }}>
+      <h4 className="card-header-a bg-dark text-light p-2 m-0">
                     {tradie.name} <br />
                   </h4>
-                  <ul>
-                    <li>{tradie.trade}</li>
-                    <li>{tradie.location}</li>
-                    <li>{tradie.email}</li>
-                    <li>{tradie.phone}</li>
+
+                  <ul className='ul-a'>
+                    <li>Trade :- {tradie.trade} </li>
+                    <li>Location :- {tradie.location}</li>
+                    <li>Email :- {tradie.email}</li>
+                    <li> Phone :- {tradie.phone}</li>
                   </ul>
 
-      <div className="my-5">
+      <div className=" card my-5">
         <CommentList comments={tradie.comments} />
       </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="card m-3 p-4" style={{ border: '2px solid #1a1a1a' }}>
         <CommentForm tradieId={tradie._id} />
       </div>
     </div>

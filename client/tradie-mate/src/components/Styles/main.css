@@ -104,7 +104,7 @@ header img {
 }
 
 *{
-    margin: 0;
+    margin: 6;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -121,6 +121,7 @@ body{
     max-width: 1300px;
     width: 100%;
     margin: auto;
+    border: .5px solid black;
 }
 section{
     min-height: 100vh;
@@ -141,13 +142,13 @@ h1{
 }
 .card{
     flex: 0 0 calc(33.33% - 20px);
-    margin: 5px;
-    width: 225px;
+    margin: 10px;
+    width: 325px;
     background:#7e8983;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
     transition: .3s;
-    border: 5px solid transparent;
+    border: 2px solid transparent;
     border-color: rgb(41, 42, 40);
 }
 .card:hover{
@@ -160,7 +161,7 @@ border-color:yellow ;
     background:rgb(143, 143, 106);
     color: black;
     border-radius: 10px;
-    max-width: 120px;
+    /* max-width: 120px; */
     width: 100%;
     height: 40px;
     display: flex;
@@ -179,9 +180,12 @@ border-color:yellow ;
   #test{
 display: flex;
 flex-wrap: wrap;
-width: 60%;
+width: 100%;
 margin: auto;
-margin-top: 40px;
+/* margin-top: 40px; */
+background-color: #787c8a;
+justify-content: center;
+border: 2px solid black;
 
   }
   .align-centre{
@@ -192,50 +196,114 @@ margin-top: 40px;
     padding: 2px 2px;
   }
   
-  /* .footer{
-
-    display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 80px;
-	padding: 0 2rem;
-	background-color: var(--mainColor);
-	color: var(--textColor);
-
-    box-shadow:3px 3px 3px 3px #1f1f20;
-  }
-
-.sb__footer{
+.container {
     display: flex;
     flex-direction: column;
-    width:100%;
-}
-.sb__footer-links{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    flex-wrap:wrap;
-    width: 100%;
+}
+
+.card-header {
+    background-color: #343a40;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    padding: 1rem 6rem;
+    border-radius: 10px;
+    border: 2px solid black;
    
-    margin-bottom: 4rem;
 }
-
-.sb__footer-links-div{
-    width: 100%;
-    margin: 1.3rem;
+.card-header-a{
+    background-color: #343a40;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    padding: 1rem 18rem;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-justify-content:center;
-flex-direction: column;
-
-
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 3px solid #1f1f20;
+    
 }
-h5{
-    color: #d2c7c7;
-   text-align: center;
-   max-width: 100%;
-   margin: 0 auto;
+.ul-a{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 3px solid #1f1f20;
+    width: 40%;
+;
+}
+
+li{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: #1f1f20;
+}
+
+my-3{
+    border-radius: 15px;
+    padding: 20px;
+    border: 5px solid black;
+}
+/* .card{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
 } */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    font-size:1.2rem;
+    margin-bottom: 0.5rem;
+}
+input,
+ textarea {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+ }
+
+ button {
+background-color: #343a40;
+color: #fff;
+font-size: 1.2rem;
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 0.25rem;
+cursor: pointer;
+ }
+
 .footer{
 display: flex;
 align-items: center;
@@ -244,7 +312,7 @@ height: 80px;
 padding: 0 2rem;
 background-color: var(--mainColor);
 color: var(--textColor);
-box-shadow: 3px 3px 3px 3px #1f1f20;
+box-shadow: -1px -2px 3px 3px #1f1f20;
 }
 
 .sb__footer {
