@@ -23,6 +23,18 @@ Trade Mate is a mobile app that connects the public to tradespeople and helps th
 - SO I can contact the tradespeople I'm interested in via email or phone and ask for a quote
 - WHEn I contact the tradie i can communicate with them directly to ask any questions I have and get a sense of their expertise and     availability.
 
+
+**Technologies Used**
+-
+- React (Frontend)
+-  GraphQL (Server)
+-  Node.js (Server)
+-  Express.js (Server) 
+-  MongoDB (Database)
+-  Mongoose ODM (Database)
+-  Heroku (Deployment)
+-  Authenciation (JWT)
+
 **Acceptance Criteria**
 -
  This project is graded based on the following criteria:
