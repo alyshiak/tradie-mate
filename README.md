@@ -34,6 +34,7 @@ Trade Mate is a mobile app that connects the public to tradespeople and helps th
 -  Mongoose ODM (Database)
 -  Heroku (Deployment)
 -  Authenciation (JWT)
+- MERN Stack
 
 **Acceptance Criteria**
 -
