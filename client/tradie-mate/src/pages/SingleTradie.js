@@ -25,7 +25,7 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
     });
 
   const deleteTradieHandler = async (event) => {
-    // const tradieId = event.target.id;
+    let tradieId = event.target.id;
     await removeTradie({
       variables: {
         tradieId: tradieId
@@ -63,13 +63,13 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
                   </ul>
 
       <div className=" card my-5">
-        <CommentList comments={tradie.comments} />
+        <CommentList comments={tradieId} />
       </div>
       <div className="card m-3 p-4" style={{ border: '2px solid #1a1a1a' }}>
-        <CommentForm tradieId={tradie._id} />
+        <CommentForm id={tradieId} />
       </div>
       <div className="col-12 col-lg-3">
-      <Link className="library-delete lib-button" id={tradie?.tradieId} onClick={deleteTradieHandler}>DELETE</Link>
+      <Link className="library-delete lib-button" id={tradieId} onClick={deleteTradieHandler}>DELETE</Link>
             </div>
     </div>
   );
