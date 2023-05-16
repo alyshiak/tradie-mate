@@ -1,18 +1,38 @@
 import React from 'react';
 
 // Import the `useParams()` hook
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
 import "../components/Styles/main.css";
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 import { REMOVE_TRADIE } from '../utils/mutations';
-import { QUERY_SINGLE_TRADIE } from '../utils/queries';
+import { QUERY_SINGLE_TRADIE,QUERY_TRADIES } from '../utils/queries';
 
 const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { tradieId: tradieId }  = useParams(':tradieId');
   console.log(tradieId)
+  const [removeTradie] = useMutation(REMOVE_TRADIE, 
+    {
+      update(cache, { data: { removeTradie }}) {
+        console.log(removeTradie);
+        cache.writeQuery({
+          query: QUERY_SINGLE_TRADIE,
+          data: { tradie: removeTradie },
+        });
+      }
+    });
+
+  const deleteTradieHandler = async (event) => {
+    // const tradieId = event.target.id;
+    await removeTradie({
+      variables: {
+        tradieId: tradieId
+      }
+    })
+  };
+
 
   const { loading, data } = useQuery(QUERY_SINGLE_TRADIE, {
     // Pass the `thoughtId` URL parameter into query to retrieve this thought's data
@@ -49,9 +69,7 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
         <CommentForm tradieId={tradie._id} />
       </div>
       <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Delete
-              </button>
+      <Link className="library-delete lib-button" id={tradie?.tradieId} onClick={deleteTradieHandler}>DELETE</Link>
             </div>
     </div>
   );
