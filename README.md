@@ -1,5 +1,4 @@
 
-
 # Tradie-Mate
 
 ## Project Team
@@ -9,14 +8,20 @@
 
 **Project Description**
 -
-
-
-
+Trade Mate is a mobile app that connects the public to tradespeople and helps them find the right tradesperson for their construction jobs. The app allows users to create a profile, add tradespeople they know or have used previously, look through our database of tradies and have the ability to contact them via email or phone to hire them. The app aims to imporve the effciency and quality of the construction industry.
 
 
 **User Story**
 -
-
+- As a homeowner who needs to hire a tradesperson for my construction project
+- I WANT to use the Trade Mate mobile app to find the right person for the job quickly and easily
+- AS I open the app 
+- I WANT to browse through the app's database of trusted tradespeople
+- SO I can find tradespeople who have experience with similar projects
+- WHEN I click on a tradie 
+- I CAN see their details, read their reviews and check their ratings
+- SO I can contact the tradespeople I'm interested in via email or phone and ask for a quote
+- WHEn I contact the tradie i can communicate with them directly to ask any questions I have and get a sense of their expertise and     availability.
 
 **Acceptance Criteria**
 -
@@ -80,23 +85,19 @@ Uses a service worker for offline functionality
 
 Is installable.
 
-
-
-
 **Deployed link & Screenshot**
--
-
-
-
-
-
+-https://tradie-mate.herokuapp.com/ 
+https://github.com/alyshiak/tradie-mate/
+![image](https://github.com/alyshiak/tradie-mate/assets/118101244/01722527-756a-4462-a3da-95604169b07e)
+![image](https://github.com/alyshiak/tradie-mate/assets/118101244/d1854bbe-8c35-437a-99cd-1aa94f26815b)
 
 
 **References & Resources**
--
+- https://developer.mozilla.org/en-US/
 - https://www.google.com.au/
 - https://www.youtube.com/
 - https://developer.mozilla.org/en-US/
+- https://dev.to/
 
 
 
