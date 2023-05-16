@@ -13,7 +13,7 @@ Trade Mate is a mobile app that connects the public to tradespeople and helps th
 
 **User Story**
 -
-- As a homeowner who needs to hire a tradesperson for my construction project
+- AS A homeowner who needs to hire a tradesperson for my construction project
 - I WANT to use the Trade Mate mobile app to find the right person for the job quickly and easily
 - AS I open the app 
 - I WANT to browse through the app's database of trusted tradespeople
