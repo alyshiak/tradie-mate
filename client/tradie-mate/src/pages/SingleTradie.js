@@ -2,11 +2,11 @@ import React from 'react';
 
 // Import the `useParams()` hook
 import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import "../components/Styles/main.css";
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
-
+import { REMOVE_TRADIE } from '../utils/mutations';
 import { QUERY_SINGLE_TRADIE } from '../utils/queries';
 
 const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
@@ -15,6 +15,10 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
   console.log(tradieId)
 
   const { loading, data } = useQuery(QUERY_SINGLE_TRADIE, {
+    // Pass the `thoughtId` URL parameter into query to retrieve this thought's data
+    variables: {tradieId: tradieId},
+  })
+  useMutation(REMOVE_TRADIE, {
     // Pass the `thoughtId` URL parameter into query to retrieve this thought's data
     variables: {tradieId: tradieId},
   });
@@ -43,6 +47,11 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm tradieId={tradie._id} />
       </div>
+      <div className="col-12 col-lg-3">
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Delete
+              </button>
+            </div>
     </div>
   );
 };
