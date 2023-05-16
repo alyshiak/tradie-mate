@@ -60,8 +60,6 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
                     <li>Location :- {tradie.location}</li>
                     <li>Email :- {tradie.email}</li>
                     <li> Phone :- {tradie.phone}</li>
-
-                    <Link to ="/"className='library-delete lib-button' id={tradieId} onClick={deleteTradieHandler}>DELETE</Link>
                   </ul>
 
       <div className=" card my-5">
@@ -70,8 +68,10 @@ const SingleTradie = ({  name,  trade, location, email, phone, comments}) => {
       <div className="card m-3 p-4" style={{ border: '2px solid #1a1a1a' }}>
         <CommentForm id={tradieId} />
       </div>
+      <div className="col-12 col-lg-3">
+      <Link className="library-delete lib-button" id={tradieId} onClick={deleteTradieHandler}>DELETE</Link>
+            </div>
     </div>
-    
   );
 };
 
