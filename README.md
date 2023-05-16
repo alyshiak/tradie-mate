@@ -86,8 +86,10 @@ Uses a service worker for offline functionality
 Is installable.
 
 **Deployed link & Screenshot**
--https://tradie-mate.herokuapp.com/ 
-https://github.com/alyshiak/tradie-mate/
+-
+- https://tradie-mate.herokuapp.com/ 
+
+- https://github.com/alyshiak/tradie-mate/
 ![image](https://github.com/alyshiak/tradie-mate/assets/118101244/01722527-756a-4462-a3da-95604169b07e)
 ![image](https://github.com/alyshiak/tradie-mate/assets/118101244/d1854bbe-8c35-437a-99cd-1aa94f26815b)
 
