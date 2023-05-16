@@ -39,10 +39,10 @@ const TradieForm = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="container flex-row justify-center mb-4 " style={{ backgroundColor: '#787c8a' }}>
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Add Tradie Mate</h4>
+          <h4 className="card-header bg-dark text-light p-2">Add a Tradie Mate</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -53,7 +53,7 @@ const TradieForm = () => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your name"
+                  placeholder="Your Name"
                   name="name"
                   type="text"
                   value={formState.name}
@@ -61,7 +61,7 @@ const TradieForm = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your trade"
+                  placeholder="Your Trade"
                   name="trade"
                   type="text"
                   value={formState.trade}
@@ -69,7 +69,7 @@ const TradieForm = () => {
                 />
                  <input
                   className="form-input"
-                  placeholder="Your location"
+                  placeholder="Your Location"
                   name="location"
                   type="text"
                   value={formState.location}
@@ -77,7 +77,7 @@ const TradieForm = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Your Email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -85,7 +85,7 @@ const TradieForm = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="phone number"
+                  placeholder="Phone Number"
                   name="phone"
                   type="text"
                   value={formState.phone}
@@ -94,7 +94,7 @@ const TradieForm = () => {
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
-                  type="submit"
+                  type="Submit"
                 >
                   Submit
                 </button>
